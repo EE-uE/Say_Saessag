@@ -11,7 +11,8 @@ public enum ItemType
 public enum ConsumableType
 {
     Health,
-    Hunger
+    Hunger,
+    Stamina
 }
 
 public enum TimeConsumableType

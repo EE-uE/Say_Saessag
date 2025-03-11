@@ -45,10 +45,13 @@ public class EquipTool : Equip
     {
         Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hit;
-
+        Debug.Log("OnHit");
         if (Physics.Raycast(ray, out hit, attackDistance))
         {
-            if (doesGatherResources && hit.collider.TryGetComponent(out Resource resource))
+            Debug.Log(hit.collider.name);
+            Debug.Log(hit.collider.TryGetComponent(out Resource resource));
+            //여기 조건에 성립이 안되어있기때문에 flase값이 들어와서 자원채취가 안됨
+            if (doesGatherResources)
             {
                 resource.Gather(hit.point, hit.normal);
             }

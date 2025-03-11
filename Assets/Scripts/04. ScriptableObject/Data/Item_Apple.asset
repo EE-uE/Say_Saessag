@@ -24,5 +24,7 @@ MonoBehaviour:
     value: 10
   - type: 1
     value: 20
+  - type: 2
+    value: 20
   timeconsumable: []
   equipPrefab: {fileID: 0}
